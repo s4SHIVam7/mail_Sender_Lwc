@@ -1,2 +1,10 @@
 <template>
+    <lightning-card title = "Send Email" icon-name = "action:email">
+        <div class="slds-m-around_medium">
+            <lightning-input data-id="recipientEmailError" onchange={handleRecipientChange} label="Recipient Email" type="email" value={recipientEmail} ></lightning-input>
+            <lightning-input data-id="subjectError"  label="Subject" value={subject} onchange={handleSubjectChange}></lightning-input>
+            <lightning-textarea data-id="emailBodyError" label="Email Body" value={emailBody} onchange={handleEmailBodyChange}></lightning-textarea>
+            <lightning-button label="Send Email" variant="brand" onclick={sendEmail}></lightning-button>
+        </div>
+    </lightning-card>
 </template>
